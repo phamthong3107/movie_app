@@ -10,7 +10,6 @@ const Row = ({title, fetchURL, rowID}) => {
         setMovies(res.data.results)
       })
     }, [fetchURL])
-    console.log(Movies)
     const slideLeft = () =>{
         var slider = document.getElementById("slider" + rowID)
         slider.scrollLeft = slider.scrollLeft - 500

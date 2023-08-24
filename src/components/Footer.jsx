@@ -4,7 +4,7 @@ import {FaAppStore,FaGooglePlay} from 'react-icons/fa'
 const Footer = () => {
   return (
     <>
-        <div className='text-white bg-black w-full h-auto lg:px-[5%] py-[50px] grid lg:grid-cols-3 gap-x-8 sm:grid-cols-1 sm:px-0'>
+        <div className='text-white bg-[#191919] w-full h-auto lg:px-[5%] py-[50px] grid lg:grid-cols-3 gap-x-8 sm:grid-cols-1 sm:px-0'>
             <div className="col-span-2 px-2">
                 <div className='flex items-center justify-between lg:p-5 text-base'>
                     <p>Terms of Use</p>
