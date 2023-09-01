@@ -22,7 +22,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />}/>
-        <Route path="/detail" element={<Detail />} />
+        <Route path="/detail/:detailID" element={<Detail />} />
         <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>}/>
       </Routes>
       </MovieContext.Provider>

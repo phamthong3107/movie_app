@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
-import { MovieContext } from '../context/MovieContext'
 import {BsFillPlayFill,BsPlus, BsCheck} from 'react-icons/bs'
 import { key } from '../Requests'
 import axios from 'axios'
@@ -10,11 +9,12 @@ import 'react-circular-progressbar/dist/styles.css';
 import {db} from '../Firebase'
 import {arrayUnion, doc, updateDoc} from 'firebase/firestore' 
 import { UserAuth } from '../context/AuthContext'
+import { useParams } from 'react-router-dom'
 
 
 const Detail = () => {
-    const {idMovie} = useContext(MovieContext)
-    const requestMovie = `https://api.themoviedb.org/3/movie/${idMovie}?api_key=${key}&append_to_response=videos`
+    const {detailID} = useParams()
+    const requestMovie = `https://api.themoviedb.org/3/movie/${detailID}?api_key=${key}&append_to_response=videos`
     const [Movie, setMovie] = useState([])
     const [Genres, setGenres] = useState([])
     const [SrcVideo, setSrcVideo] = useState([])

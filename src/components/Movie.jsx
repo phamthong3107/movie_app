@@ -18,7 +18,7 @@ const Movie = ({item}) => {
             <img className='cursor-pointer object-cover transition duration shadow-xl rounded-t-md w-full h-full' src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`} alt={item?.title} />
             <div className="absolute bg-gradient-to-r from-black top-0 w-full h-full border-l-4 border-red-600"></div>
             <div className="absolute top-[20%] left-4">
-                <Link to="/detail">
+                <Link to={`detail/${item?.id}`}>
                     <h2 onClick={() => handleMovie(item?.id)} className='font-bold text-white text-2xl'>{item?.title}</h2>
                 </Link>
                 <div className='text-gray-400 my-3'>
