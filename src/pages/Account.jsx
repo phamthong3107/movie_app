@@ -1,6 +1,5 @@
 import React from 'react'
 import SavedShows from '../components/SavedShows'
-import Footer from '../components/Footer'
 
 const Account = () => {
   return (
@@ -13,7 +12,6 @@ const Account = () => {
         </div>
       </div>
       <SavedShows />
-      <Footer />
     </>
   )
 }

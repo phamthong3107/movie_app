@@ -9,6 +9,8 @@ import Account from "./pages/Account";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Detail from "./pages/Detail";
 import { useState } from "react";
+import Searchpage from "./pages/Searchpage";
+import Footer from "./components/Footer";
 
 function App() {
   const [idMovie, setidMovie] = useState("")
@@ -24,8 +26,10 @@ function App() {
         <Route path="/signup" element={<Signup />}/>
         <Route path="/detail/:detailID" element={<Detail />} />
         <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>}/>
+        <Route path="/search" element={<Searchpage />} />
       </Routes>
       </MovieContext.Provider>
+      <Footer />
     </AuthContextProvider>
     </>
   );

@@ -3,7 +3,6 @@ import ReactPlayer from 'react-player/youtube'
 import {BsFillPlayFill,BsPlus, BsCheck} from 'react-icons/bs'
 import { key } from '../Requests'
 import axios from 'axios'
-import Footer from '../components/Footer'
 import { CircularProgressbar,buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import {db} from '../Firebase'
@@ -153,7 +152,6 @@ const Detail = () => {
             </div>
         </div>
         
-    <Footer/>
         <div onClick={hideVideo} id='video-player' className='hidden absolute top-0 left-0 w-full h-full bg-black/70'>
             <div className='absolute top-[20%] left-[20%] lg:w-[1000px] lg:h-[500px] sm:w-[300px]'>
                 <ReactPlayer controls={true} width={"100%"} height={"100%"} url={`https://www.youtube.com/watch?v=${SrcVideo}`} />

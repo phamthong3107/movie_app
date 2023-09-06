@@ -12,7 +12,6 @@ const Home = () => {
         <Row rowID='2' title='TopRated' fetchURL={requests.requestTopRated}/>
         <Row rowID='3' title='Trending' fetchURL={requests.requestTrending}/>
         <Row rowID='4' title='Upcoming' fetchURL={requests.requestUpcoming}/>
-        <Footer />
     </div>
   )
 }

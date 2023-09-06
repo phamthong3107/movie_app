@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
-
+import {BiSearch} from 'react-icons/bi'
 const Navbar = () => {
   const {user, logOut} = UserAuth()
   const navigate = useNavigate()
@@ -17,9 +17,21 @@ const Navbar = () => {
 
   return (
     <div className='flex items-center justify-between p-4 absolute z-[100] w-full'>
+        <div className='flex items-center justify-between w-[30%]'> 
         <Link to='/'>
           <h1 className='text-red-600 text-4xl font-bold cursor-pointer'>NETFLIX</h1>
         </Link>
+        <Link to='/'>
+            <h1 className='text-white font-bold hidden lg:block'>Home</h1>
+        </Link>
+        <Link to='/account'>
+            <h1 className='text-white font-bold hidden lg:block'>My List</h1>
+        </Link>
+
+        <Link to='/search'>
+          <h1 className='text-white  hidden lg:block'><BiSearch size={20} /></h1>
+        </Link>
+        </div>
         {user?.email ? 
         ( <div>
             <Link to='/account'>
